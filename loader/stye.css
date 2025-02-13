@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+@keyframes anim {
+    0% {opacity: 0.3;}
+    50% {opacity: 0.7;}
+    100% {opacity: 1;}
+}
+
+
+.load {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate:-50% -50%;
+    animation: anim infinite 2s ease-in-out;
+}
+
+@keyframes loadsize {
+    0% {width: 800px;}
+}
+
+
+.load img {
+    animation: loadsize  2s ease-in-out;
+}
+
+.loads {
+    width: 9vw;
+    height: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(209, 6, 6);
+    color: white;
+    cursor: pointer;
+}
