@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .http-text {
+      animation: fadeOut 2s forwards;
+    }
+    .error-text {
+      animation: fadeIn 2s forwards 2s;
+    }
+    body {
+      font-family: 'Merriweather', serif;
+      color: #2d2d2d;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-700">
+  <!-- Navbar -->
+  <nav class="bg-gray-100 p-6 flex justify-between items-center shadow-lg">
+    <div class="text-2xl font-semibold text-gray-800">▲ UREA MONSIEUR</div>
+    <div class="space-x-8">
+      <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Home</a>
+      <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">About</a>
+      <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Contact</a>
+    </div>
+    <div>
+      <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Sign up</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center p-12">
+    <div class="text-center space-y-6">
+      <h1 id="http-text" class="http-text text-7xl font-bold text-gray-400">HTTP</h1>
+      <div id="error-text" class="error-text hidden">
+        <h1 class="text-7xl font-bold text-gray-800">404</h1>
+        <p class="text-2xl font-semibold text-gray-600 leading-relaxed">Page Not Found</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white p-6 text-center">
+    <p class="text-sm font-light">© 2025 UREA MONSIEUR</p>
+  </footer>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('http-text').classList.add('hidden');
+      document.getElementById('error-text').classList.remove('hidden');
+    }, 2000);
+  </script>
+</body>
+</html>
